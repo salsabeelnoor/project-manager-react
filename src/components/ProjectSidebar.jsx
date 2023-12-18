@@ -7,15 +7,15 @@ export default function ProjectSidebar({onStartAddProject, projects, onSelectPro
             <div>
                 <Button onClick={onStartAddProject}>+ Add Project</Button>
             </div>
-            <ul>
+            <ul className="mt-4">
                 {projects.map(
                     project => 
                     {
                         let cssClasses = 'w-full text-left px-2 py-1 rounded-sm my-1 text-stone-400 hover:text-stone-200 hover:bg-stone-800'
                         if(project.id === selectedProjectId){
-                            cssClasses += 'bg-stone-800 text-stone-200'
+                            cssClasses += ' bg-stone-800 text-stone-200'
                         }else{
-                            cssClasses += 'text-stone-400'
+                            cssClasses += ' text-stone-400'
                         }
                         return (
                             <li key={project.id}>
